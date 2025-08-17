@@ -242,7 +242,7 @@
         hmi_btn.disabled = true;
         hmi_btn.innerHTML = `<i class="fas fa-spinner spinner"></i> Authenticating...`;
         
-        axios.get("http://localhost:5000/send-mail", {withCredentials: true})
+        axios.get("https://hmi-class-student.vercel.app/send-mail", {withCredentials: true})
             .then(res => {
                 fetch(`/get-user?user=${res.data.user_email}`)
                     .then(res => res.json())
